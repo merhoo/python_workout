@@ -18,3 +18,23 @@ class Stack:
     def size(self):
         return len(self.items)
 
+
+def isBalanced(braces):
+    stack = Stack()
+    for i in range(len(braces)):
+        if braces[i] is '{':
+            stack.push('{')
+        if braces[i] is '[':
+            stack.push('[')
+        if braces[i] is '(':
+            stack.push('(')
+        if braces[i] is '}':
+            if stack.pop() is not '{':
+                return False
+        if braces[i] is ']':
+            if stack.pop() is not '[':
+                return False
+        if braces[i] is ')':
+            if stack.pop() is not '(':
+                return False
+    return stack.isEmpty()
