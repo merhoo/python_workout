@@ -25,8 +25,10 @@ class Queue:
 
     def dequeue(self):
         if self.head is not None:
+            remove = self.head
             self.head = self.head.next
             self.length -= 1
+            return remove
 
     def peek(self):
         return self.head.value
