@@ -52,6 +52,19 @@ class Node:
             self.right.inorder()
         print self.value,
 
+
+# def level(head):
+#     queue = Queue()
+#     queue.enqueue(head)
+#     while not queue.isEmpty():
+#         current = queue.dequeue()
+#         print current,
+#         if current.left is not None:
+#             queue.enqueue(current.left)
+#         if current.right is not None:
+#             queue.enqueue(current.right)
+
+
 root = Node(5)
 root.add(4)
 root.add(3)
@@ -63,3 +76,5 @@ root.postorder()
 print
 root.inorder()
 print
+# level(root)
+# print
